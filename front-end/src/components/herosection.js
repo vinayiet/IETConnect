@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { useNavigate } from 'react-router-dom';
 import backgroundImage from '../images/collegeimg.jpg'; // Import your background image
 
@@ -30,8 +31,13 @@ function HeaderSection() {
         <h3 style={{ fontSize: '2rem', marginBottom: '20px', color: '#FFF' }}>Recent Study Material</h3>
         <p style={{ fontSize: '1.2rem', lineHeight: '1.6', color: '#FFF' }}>This is where you can display recent uploads or categories of study material.</p>
         <div>
-          <button style={buttonStyle} onClick={() => navigate('/upload')}>Upload Papers</button>
-          <button style={buttonStyle} onClick={() => navigate('/download')}>Download Papers</button>
+          <Link to="/upload" style={{ textDecoration: 'none' }}> 
+          <button style={buttonStyle}>Upload Papers</button>
+          </Link>
+
+          <Link to="/download" style={{ textDecoration: 'none' }}>
+          <button style={buttonStyle}>Download Papers</button>
+          </Link>
         </div>
       </div>
     </header>
