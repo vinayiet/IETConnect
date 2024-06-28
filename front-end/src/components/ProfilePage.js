@@ -10,6 +10,7 @@ import ListItemText from '@mui/material/ListItemText';
 import Divider from '@mui/material/Divider';
 import Button from '@mui/material/Button';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
+import myimage from '../images/vinay.jpg';
 
 const defaultTheme = createTheme();
 
@@ -26,12 +27,17 @@ const ProfilePage = () => {
         <Grid item xs={12}>
           <Box sx={{ p: 4 }}>
             <Paper elevation={3} sx={{ p: 4, mb: 4 }}>
-              <Grid container spacing={2}>
+              <Grid container spacing={2} alignItems="center">
                 <Grid item>
                   <Avatar
                     alt="User Profile"
-                    src="/static/images/avatar/1.jpg"
-                    sx={{ width: 100, height: 100 }}
+                    src={myimage} // Use the imported image here
+                    sx={{
+                      width: 100,
+                      height: 100,
+                      borderRadius: '50%',
+                      objectFit: 'contain', // Use contain to fit without cropping
+                    }}
                   />
                 </Grid>
                 <Grid item xs>
@@ -45,7 +51,7 @@ const ProfilePage = () => {
               <List>
                 {uploadedPapers.map((paper, index) => (
                   <React.Fragment key={index}>
-                    <ListItem>
+                    <ListItem disableGutters>
                       <ListItemText
                         primary={paper.title}
                         secondary={`Uploaded on: ${paper.date}`}
