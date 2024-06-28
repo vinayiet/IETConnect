@@ -14,12 +14,14 @@ function App() {
         <Navbar />
         <HeroSection />
         <HeaderSection />
-        <Routes>
+        
+        <Footer />
+        
+      </div>
+      <Routes>
           <Route path="/" element={<UploadPage />} />
           <Route path="/download" element={<DownloadPage />} />
         </Routes>
-        <Footer />
-      </div>
     </Router>
   );
 }
