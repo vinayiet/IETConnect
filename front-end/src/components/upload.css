@@ -1,0 +1,109 @@
+/* General styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+/* Container for the entire upload page */
+.upload-page {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    margin-top: 50px;
+}
+
+/* Header */
+.upload-page h1 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 30px;
+}
+
+/* Form styles */
+.filter-form {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-bottom: 20px;
+    justify-content: center;
+}
+
+.filter-form div {
+    flex: 1 1 200px;
+    display: flex;
+    flex-direction: column;
+}
+
+.filter-form label {
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #555;
+}
+
+.filter-form input {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.filter-form button {
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 4px;
+    background-color: #28a745;
+    color: #fff;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.filter-form button:hover {
+    background-color: #218838;
+}
+
+/* List of papers */
+.papers-list {
+    margin-top: 20px;
+}
+
+.paper-item {
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    margin-bottom: 15px;
+    background-color: #fafafa;
+}
+
+.paper-item h2 {
+    margin: 0 0 10px;
+    font-size: 20px;
+    color: #333;
+}
+
+.paper-item .tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.paper-item .tags p {
+    background-color: #e9ecef;
+    padding: 5px 10px;
+    border-radius: 4px;
+    margin: 0;
+    font-size: 14px;
+    color: #555;
+}
+
+/* Active class for filter container */
+.filter-container.active {
+    border: 2px solid #28a745;
+    padding: 10px;
+    border-radius: 8px;
+}
