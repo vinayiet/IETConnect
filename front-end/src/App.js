@@ -49,7 +49,7 @@ function App() {
           element={
             <>
               <Navbar />
-              <HeaderSection />
+              
               <DownloadPage />
               <Footer />
             </>

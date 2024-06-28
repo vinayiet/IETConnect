@@ -1,0 +1,65 @@
+/* DownloadPage.css */
+
+/* Container styling with background image */
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-image: url('../images/collegeimg.jpg'); /* Replace with your image path */
+    background-size: cover; /* Ensure the background image covers the entire container */
+    background-position: center; /* Center the background image */
+    padding: 20px;
+    box-sizing: border-box;
+  }
+  
+  /* Card styling */
+  .card {
+    width: 80%;
+    max-width: 600px;
+    padding: 30px;
+    background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent white background for better readability */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Increased shadow */
+    border-radius: 12px;
+    border: 1px solid #e0e0e0;
+  }
+  
+  /* Dropdown button styling */
+  #category, #cseSubcategory {
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    background-color: #f9f9f9;
+    margin-top: 16px;
+  }
+  
+  /* Subcategory dropdown margin */
+  #subcategory {
+    margin-top: 16px;
+  }
+  
+  /* Option styling */
+  option {
+    font-size: 14px;
+  }
+  
+  /* Download button styling */
+  .download-button {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    margin-top: 24px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  
+  .download-button:hover {
+    background-color: #0056b3;
+  }
+  
