@@ -12,8 +12,8 @@ import Grid from '@mui/material/Grid';
 import LockOutlinedIcon from '@mui/icons-material/LockOutlined';
 import Typography from '@mui/material/Typography';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
+import { useNavigate } from 'react-router-dom'; // Import useNavigate
 
-// Import the local image with a distinct name to avoid confusion
 import collegeBackgroundImage from '../images/collegeimg.jpg';
 
 function Copyright(props) {
@@ -32,13 +32,20 @@ function Copyright(props) {
 const defaultTheme = createTheme();
 
 export default function SignInSide() {
+  const navigate = useNavigate(); // Initialize useNavigate
+
   const handleSubmit = (event) => {
     event.preventDefault();
     const data = new FormData(event.currentTarget);
-    console.log({
-      email: data.get('email'),
-      password: data.get('password'),
-    });
+    const email = data.get('email');
+    const password = data.get('password');
+
+    // Check email and password
+    if (email === 'vinayiet435@gmail.com' && password === '12345678') {
+      navigate('/profile'); // Redirect to profile page
+    } else {
+      alert('Invalid email or password');
+    }
   };
 
   return (

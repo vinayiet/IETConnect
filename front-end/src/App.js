@@ -8,6 +8,8 @@ import UploadPage from './components/upload';
 import DownloadPage from './components/download';
 import SignInSide from './components/Signin';
 import PhotosDetails from './components/photosDetails';
+import ProfilePage from './components/ProfilePage';
+
 function App() {
   return (
     <Router>
@@ -19,41 +21,45 @@ function App() {
               <>
                 <Navbar />
                 <HeroSection />
-                <PhotosDetails />
                 <HeaderSection />
                 <Footer />
               </>
             }
           />
+          <Route path="/login" element={<SignInSide />} />
           <Route
-            path="/login"
+            path="/upload"
             element={
               <>
-                <SignInSide />
+                <Navbar />
+                <HeaderSection />
+                <UploadPage />
+                <Footer />
               </>
             }
           />
           <Route
-          path="/upload"
-          element={
-            <>
-              <Navbar />
-              <HeaderSection />
-              <UploadPage />
-              <Footer />
-            </>
-          }
+            path="/download"
+            element={
+              <>
+                <Navbar />
+                
+                <PhotosDetails />
+                <DownloadPage />
+                <Footer />
+              </>
+            }
           />
-            <Route
-          path="/download"
-          element={
-            <>
-              <Navbar />
-              
-              <DownloadPage />
-              <Footer />
-            </>
-          }
+          <Route
+            path="/profile"
+            element={
+              <>
+                <Navbar />
+                <HeaderSection />
+                <ProfilePage />
+                <Footer />
+              </>
+            }
           />
         </Routes>
       </div>
