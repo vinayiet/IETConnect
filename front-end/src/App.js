@@ -6,19 +6,54 @@ import HeaderSection from './components/header';
 import Footer from './components/footer';
 import UploadPage from './components/upload';
 import DownloadPage from './components/download';
-
+import SignInSide from './components/Signin';
 function App() {
   return (
     <Router>
       <div>
-        <Navbar />
-        <HeroSection />
-        <HeaderSection />
         <Routes>
-          <Route path="/" element={<UploadPage />} />
-          <Route path="/download" element={<DownloadPage />} />
+          <Route
+            path="/"
+            element={
+              <>
+                <Navbar />
+                <HeroSection />
+                <HeaderSection />
+                <Footer />
+              </>
+            }
+          />
+          <Route
+            path="/login"
+            element={
+              <>
+                <SignInSide />
+              </>
+            }
+          />
+          <Route
+          path="/upload"
+          element={
+            <>
+              <Navbar />
+              <HeaderSection />
+              <UploadPage />
+              <Footer />
+            </>
+          }
+          />
+            <Route
+          path="/download"
+          element={
+            <>
+              <Navbar />
+              <HeaderSection />
+              <DownloadPage />
+              <Footer />
+            </>
+          }
+          />
         </Routes>
-        <Footer />
       </div>
     </Router>
   );
