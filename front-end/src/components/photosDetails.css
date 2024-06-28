@@ -1,0 +1,25 @@
+/* photosDetails.css */
+
+.photos-details-container {
+    width: 80%;
+    margin: 20px auto;
+  }
+  
+  .row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+  }
+  
+  .column {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ccc;
+  }
+  
+  .photo {
+    width: 100%;
+    max-height: 200px; /* Adjust the max-height as per your requirement */
+    object-fit: cover; /* Ensures the image covers the entire area */
+  }
+  

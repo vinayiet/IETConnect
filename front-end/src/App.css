@@ -1,38 +1,91 @@
-.App {
-  text-align: center;
-}
+/* App.css or global CSS file */
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
+/* Apply background image and fade effect to the whole site */
+body {
+  position: relative;
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-image: url('../images/collegeimg.jpg'); /* Replace with your image path */
+  background-size: cover;
+  background-position: center;
+  overflow: hidden; /* Ensure the pseudo-element doesn't overflow the body */
   min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+body::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Adjust the rgba values to change the overlay color and transparency */
+  z-index: -1; /* Ensure the overlay is behind all other content */
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* Ensure all page content is above the overlay */
+.container {
+  position: relative;
+  z-index: 1;
+}
+
+/* Card styling */
+.card {
+  width: 80%;
+  max-width: 600px;
+  padding: 30px;
+  background-color: rgba(255, 255, 255, 0.9);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 12px;
+  border: 1px solid #e0e0e0;
+}
+
+/* Dropdown button styling */
+#category, #cseSubcategory {
+  width: 100%;
+  padding: 12px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  background-color: #f9f9f9;
+  margin-top: 16px;
+}
+
+/* Subcategory dropdown margin */
+#subcategory {
+  margin-top: 16px;
+}
+
+/* Option styling */
+option {
+  font-size: 14px;
+}
+
+/* File upload label styling */
+.file-upload-label {
+  display: block;
+  margin-top: 16px;
+}
+
+/* File upload input styling */
+.file-upload-input {
+  margin-top: 8px;
+}
+
+/* Upload button styling */
+.upload-button {
+  display: block;
+  width: 100%;
+  padding: 12px;
+  margin-top: 24px;
+  background-color: #28a745;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.upload-button:hover {
+  background-color: #218838;
 }

@@ -7,6 +7,7 @@ import Footer from './components/footer';
 import UploadPage from './components/upload';
 import DownloadPage from './components/download';
 import SignInSide from './components/Signin';
+import PhotosDetails from './components/photosDetails';
 function App() {
   return (
     <Router>
@@ -18,6 +19,7 @@ function App() {
               <>
                 <Navbar />
                 <HeroSection />
+                <PhotosDetails />
                 <HeaderSection />
                 <Footer />
               </>
@@ -47,7 +49,7 @@ function App() {
           element={
             <>
               <Navbar />
-              <HeaderSection />
+              
               <DownloadPage />
               <Footer />
             </>
